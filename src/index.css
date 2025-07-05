@@ -4,51 +4,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern Professional Design System for Adithya's Portfolio */
+/* Interstellar Black Hole Themed Design System */
 
 @layer base {
   :root {
-    /* Core Brand Colors - Professional Tech Palette */
-    --background: 0 0% 100%;
-    --foreground: 222 84% 4.9%;
+    /* Core Dark Universe Colors */
+    --background: 0 0% 3%;           /* Deep space black */
+    --foreground: 280 100% 90%;      /* Neon violet light */
     
-    /* Professional Blue-Purple Gradient System */
-    --primary: 221 83% 53%;          /* Modern Blue */
-    --primary-foreground: 0 0% 98%;
-    --primary-light: 221 83% 65%;    /* Lighter blue for accents */
-    --primary-dark: 221 83% 42%;     /* Darker blue for depth */
+    /* Neon Violet Spectrum */
+    --primary: 280 100% 70%;         /* Bright neon violet */
+    --primary-foreground: 0 0% 5%;   /* Dark text on violet */
+    --primary-light: 280 100% 85%;   /* Light neon violet */
+    --primary-dark: 280 100% 55%;    /* Deep neon violet */
     
-    --secondary: 252 56% 57%;        /* Purple accent */
-    --secondary-foreground: 0 0% 98%;
-    --secondary-light: 252 56% 70%;
+    --secondary: 320 100% 60%;       /* Purple-pink accent */
+    --secondary-foreground: 0 0% 5%;
+    --secondary-light: 320 100% 75%;
     
-    --accent: 142 76% 36%;           /* Success green */
-    --accent-foreground: 0 0% 98%;
+    --accent: 260 100% 80%;          /* Electric blue accent */
+    --accent-foreground: 0 0% 5%;
     
-    /* Neutral System */
-    --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --border: 214 32% 91%;
+    /* Dark Space Neutrals */
+    --card: 0 0% 8%;                 /* Dark card background */
+    --card-foreground: 280 100% 90%;
+    --muted: 0 0% 12%;               /* Subtle dark surface */
+    --muted-foreground: 280 50% 70%;
+    --border: 280 50% 20%;           /* Subtle violet border */
     
     /* Interactive Elements */
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 4.9%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 280 100% 90%;
+    --input: 0 0% 12%;
+    --ring: 280 100% 70%;
     
-    /* Design System Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--primary)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--secondary)), hsl(var(--primary-light)));
+    /* Black Hole Inspired Gradients */
+    --gradient-primary: radial-gradient(circle, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(0 0% 0%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--primary-dark)));
+    --gradient-accent: conic-gradient(from 0deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: radial-gradient(ellipse at center, hsl(var(--primary) / 0.3) 0%, hsl(var(--secondary) / 0.2) 40%, hsl(0 0% 0%) 100%);
+    --gradient-blackhole: radial-gradient(circle, transparent 30%, hsl(var(--primary) / 0.8) 70%, hsl(var(--secondary)) 100%);
     
-    /* Shadows & Effects */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-card: 0 4px 12px -2px hsl(222 84% 4.9% / 0.08);
-    --shadow-hover: 0 8px 25px -5px hsl(var(--primary) / 0.4);
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    /* Cosmic Shadows & Effects */
+    --shadow-elegant: 0 0 50px hsl(var(--primary) / 0.6), 0 0 100px hsl(var(--secondary) / 0.3);
+    --shadow-card: 0 8px 32px hsl(var(--primary) / 0.15), inset 0 1px 0 hsl(var(--primary) / 0.1);
+    --shadow-hover: 0 0 80px hsl(var(--primary) / 0.8), 0 0 120px hsl(var(--secondary) / 0.4);
+    --shadow-glow: 0 0 60px hsl(var(--primary)), 0 0 120px hsl(var(--secondary) / 0.5);
     
     /* Animation System */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,46 +73,47 @@
   }
 
   .dark {
-    /* Dark Mode Colors */
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Enhanced Dark Universe Colors */
+    --background: 0 0% 1%;
+    --foreground: 280 100% 95%;
     
-    --card: 222 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 280 100% 95%;
     
-    --popover: 222 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 280 100% 95%;
     
-    --primary: 221 83% 60%;
-    --primary-foreground: 222 84% 4.9%;
-    --primary-light: 221 83% 72%;
-    --primary-dark: 221 83% 48%;
+    --primary: 280 100% 75%;
+    --primary-foreground: 0 0% 3%;
+    --primary-light: 280 100% 90%;
+    --primary-dark: 280 100% 60%;
     
-    --secondary: 252 56% 65%;
-    --secondary-foreground: 222 84% 4.9%;
-    --secondary-light: 252 56% 77%;
+    --secondary: 320 100% 65%;
+    --secondary-foreground: 0 0% 3%;
+    --secondary-light: 320 100% 80%;
     
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 280 50% 75%;
     
-    --accent: 142 76% 45%;
-    --accent-foreground: 222 84% 4.9%;
+    --accent: 260 100% 85%;
+    --accent-foreground: 0 0% 3%;
     
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 221 83% 60%;
+    --border: 280 50% 15%;
+    --input: 0 0% 8%;
+    --ring: 280 100% 75%;
     
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--primary)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--secondary)), hsl(var(--primary-light)));
+    /* Enhanced cosmic gradients */
+    --gradient-primary: radial-gradient(circle, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(0 0% 0%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--primary-dark)));
+    --gradient-accent: conic-gradient(from 0deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: radial-gradient(ellipse at center, hsl(var(--primary) / 0.4) 0%, hsl(var(--secondary) / 0.3) 40%, hsl(0 0% 0%) 100%);
+    --gradient-blackhole: radial-gradient(circle, transparent 20%, hsl(var(--primary) / 0.9) 80%, hsl(var(--secondary)) 100%);
     
-    /* Dark mode shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.4);
-    --shadow-card: 0 4px 12px -2px hsl(0 0% 0% / 0.3);
-    --shadow-hover: 0 8px 25px -5px hsl(var(--primary) / 0.5);
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.4);
+    /* Enhanced cosmic shadows */
+    --shadow-elegant: 0 0 60px hsl(var(--primary) / 0.8), 0 0 120px hsl(var(--secondary) / 0.4);
+    --shadow-card: 0 8px 40px hsl(var(--primary) / 0.2), inset 0 1px 0 hsl(var(--primary) / 0.15);
+    --shadow-hover: 0 0 100px hsl(var(--primary)), 0 0 150px hsl(var(--secondary) / 0.6);
+    --shadow-glow: 0 0 80px hsl(var(--primary)), 0 0 160px hsl(var(--secondary) / 0.6);
     
     /* Dark sidebar */
     --sidebar-background: 240 5.9% 10%;
@@ -139,9 +141,26 @@
 }
 
 @layer components {
-  /* Hero Components */
+  /* Black Hole & Cosmic Components */
   .hero-gradient {
     background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    background: var(--gradient-blackhole);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: blackHoleRotate 20s linear infinite;
+    opacity: 0.6;
+    z-index: 1;
   }
   
   .text-gradient {
@@ -149,22 +168,61 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 0 10px hsl(var(--primary) / 0.5));
   }
   
   .card-elegant {
     background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
     box-shadow: var(--shadow-card);
     transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    transition: left 0.8s;
+  }
+  
+  .card-elegant:hover::before {
+    left: 100%;
   }
   
   .card-elegant:hover {
     box-shadow: var(--shadow-hover);
-    transform: translateY(-4px);
+    transform: translateY(-8px);
+    border-color: hsl(var(--primary) / 0.5);
   }
   
   .btn-gradient {
     background: var(--gradient-primary);
     transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-gradient::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, hsl(var(--accent) / 0.3), transparent);
+    transition: all 0.3s;
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn-gradient:hover::before {
+    width: 300px;
+    height: 300px;
   }
   
   .btn-gradient:hover {
@@ -178,17 +236,53 @@
     transition: var(--transition-bounce);
   }
   
+  /* Cosmic Particles */
+  .cosmic-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .cosmic-particles::before,
+  .cosmic-particles::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: hsl(var(--primary));
+    border-radius: 50%;
+    animation: twinkle 3s infinite alternate;
+  }
+  
+  .cosmic-particles::before {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .cosmic-particles::after {
+    top: 60%;
+    right: 15%;
+    animation-delay: 1.5s;
+  }
+  
   /* Animation Classes */
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
   
   .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
+    animation: slideUp 1s ease-out forwards;
   }
   
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite alternate;
   }
 }
 
@@ -222,14 +316,45 @@
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px) rotate(5deg);
   }
 }
 
-/* Typing animation */
+@keyframes blackHoleRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+    transform: scale(1);
+    box-shadow: 0 0 10px hsl(var(--primary));
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--secondary));
+  }
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary));
+  }
+  to {
+    text-shadow: 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary)), 0 0 40px hsl(var(--secondary));
+  }
+}
+
+/* Enhanced Typing animation */
 @keyframes typing {
   from {
     width: 0;
@@ -247,7 +372,28 @@
 
 .typing-animation {
   overflow: hidden;
-  border-right: 2px solid hsl(var(--primary));
+  border-right: 3px solid hsl(var(--primary));
   white-space: nowrap;
   animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+}
+
+/* Interstellar Effects */
+@keyframes wormhole {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+.wormhole-effect {
+  animation: wormhole 15s linear infinite;
 }

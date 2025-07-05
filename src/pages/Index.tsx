@@ -34,7 +34,37 @@ const Index = () => {
   });
   const { toast } = useToast();
 
-  const fullText = "Full Stack Developer & Problem Solver";
+  // Hans Zimmer music on site load
+  useEffect(() => {
+    const audio = new Audio('/hans-zimmer-time.mp3');
+    audio.volume = 0.3;
+    audio.loop = true;
+    
+    const playMusic = () => {
+      audio.play().catch(e => console.log('Audio autoplay prevented'));
+    };
+    
+    // Try to play immediately
+    playMusic();
+    
+    // Also play on first user interaction
+    const handleFirstInteraction = () => {
+      playMusic();
+      document.removeEventListener('click', handleFirstInteraction);
+      document.removeEventListener('keydown', handleFirstInteraction);
+    };
+    
+    document.addEventListener('click', handleFirstInteraction);
+    document.addEventListener('keydown', handleFirstInteraction);
+    
+    return () => {
+      audio.pause();
+      document.removeEventListener('click', handleFirstInteraction);
+      document.removeEventListener('keydown', handleFirstInteraction);
+    };
+  }, []);
+
+  const fullText = "Interstellar Code Architect & Cosmic Problem Solver";
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -106,62 +136,67 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="cosmic-particles"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left animate-fade-in">
-              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4">
-                Hi, I'm <span className="text-gradient">Adithya G</span>
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4 animate-glow-pulse">
+                Hi, I'm <span className="text-gradient wormhole-effect inline-block">Adithya G</span>
               </h1>
-              <div className="text-xl lg:text-2xl text-white/90 mb-2 h-8">
+              <div className="text-xl lg:text-2xl text-primary mb-2 h-8 font-semibold">
                 {typedText}
-                <span className="animate-pulse">|</span>
+                <span className="animate-pulse text-secondary">|</span>
               </div>
-              <p className="text-lg text-white/80 mb-8 max-w-2xl">
-                Passionate Computer Science student from Coimbatore, Tamil Nadu, building innovative solutions 
-                and contributing to the tech community. Always eager to learn and create meaningful impact.
+              <p className="text-lg text-primary/80 mb-8 max-w-2xl leading-relaxed">
+                Navigating the cosmic depths of code from Coimbatore, Tamil Nadu. 
+                Architecting solutions that transcend the boundaries of space and time, 
+                building bridges between dimensions of possibility.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
-                <Button size="lg" className="btn-gradient text-white font-semibold">
+                <Button size="lg" className="btn-gradient text-white font-semibold border border-primary/30">
                   <Mail className="w-5 h-5 mr-2" />
-                  Get In Touch
+                  Enter the Wormhole
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+                <Button size="lg" variant="hero" className="bg-card/10 border-primary/30 text-primary hover:bg-primary/20 hover:shadow-glow">
                   <Download className="w-5 h-5 mr-2" />
-                  Download Resume
+                  Cosmic Resume
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+                <Button size="lg" variant="hero" className="bg-card/10 border-primary/30 text-primary hover:bg-primary/20 hover:shadow-glow">
                   <Github className="w-5 h-5 mr-2" />
-                  View Projects
+                  Stellar Projects
                 </Button>
               </div>
               <div className="flex gap-6 justify-center lg:justify-start">
                 <a href="https://linkedin.com/in/adithya-g-a2085b268/" target="_blank" rel="noopener noreferrer" 
-                   className="text-white/70 hover:text-white transition-colors">
+                   className="text-primary/70 hover:text-primary transition-all hover:shadow-glow p-2 rounded-full border border-primary/20 hover:border-primary/50">
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a href="https://github.com/Adithya14255" target="_blank" rel="noopener noreferrer"
-                   className="text-white/70 hover:text-white transition-colors">
+                   className="text-primary/70 hover:text-primary transition-all hover:shadow-glow p-2 rounded-full border border-primary/20 hover:border-primary/50">
                   <Github className="w-6 h-6" />
                 </a>
                 <a href="mailto:adithya14255@gmail.com"
-                   className="text-white/70 hover:text-white transition-colors">
+                   className="text-primary/70 hover:text-primary transition-all hover:shadow-glow p-2 rounded-full border border-primary/20 hover:border-primary/50">
                   <Mail className="w-6 h-6" />
                 </a>
               </div>
             </div>
             <div className="flex justify-center animate-float">
               <div className="relative">
-                <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-glow">
+                <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/50 shadow-glow animate-glow-pulse">
                   <img 
                     src={heroPortrait} 
-                    alt="Adithya G - Full Stack Developer" 
+                    alt="Adithya G - Interstellar Code Architect" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-gradient-primary rounded-full p-4">
+                <div className="absolute -bottom-4 -right-4 bg-gradient-primary rounded-full p-4 animate-float border-2 border-secondary/50">
                   <Code className="w-8 h-8 text-white" />
                 </div>
+                <div className="absolute -top-2 -left-2 w-6 h-6 bg-accent rounded-full animate-pulse"></div>
+                <div className="absolute top-1/4 -right-6 w-4 h-4 bg-secondary rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-1/3 -left-8 w-3 h-3 bg-primary rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
               </div>
             </div>
           </div>
