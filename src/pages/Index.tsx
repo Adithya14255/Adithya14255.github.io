@@ -5,7 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { ThemeToggle } from '@/components/theme-toggle';
 import { 
   Github, 
   Linkedin, 
@@ -135,11 +134,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Theme Toggle - Fixed Position */}
-      <div className="fixed top-6 right-6 z-50">
-        <ThemeToggle />
-      </div>
-      
       {/* Hero Section */}
       <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="neon-grid"></div>
