@@ -190,10 +190,10 @@ const Index = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-gradient-primary rounded-full p-4 border-2 border-primary pulse-glow">
+                <div className="absolute -bottom-4 -right-4 bg-primary rounded-full p-4 border-2 border-primary pulse-glow shadow-glow">
                   <Code className="w-8 h-8 text-primary-foreground floating-icon" />
                 </div>
-                <div className="absolute -top-4 -left-4 bg-gradient-secondary rounded-full p-3 border-2 border-secondary pulse-glow">
+                <div className="absolute -top-4 -left-4 bg-secondary rounded-full p-3 border-2 border-secondary pulse-glow shadow-glow">
                   <Server className="w-6 h-6 text-secondary-foreground floating-icon" />
                 </div>
               </div>
@@ -298,17 +298,17 @@ const Index = () => {
             {Object.entries(skills).map(([category, skillList], index) => (
               <Card key={category} className="card-elegant p-6 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardContent className="p-0">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-gradient-primary rounded-lg">
-                      {category.includes('Programming') && <Code className="w-5 h-5 text-white" />}
-                      {category.includes('Web') && <Globe className="w-5 h-5 text-white" />}
-                      {category.includes('DevOps') && <Server className="w-5 h-5 text-white" />}
-                      {category.includes('Cloud') && <Server className="w-5 h-5 text-white" />}
-                      {category.includes('Database') && <Database className="w-5 h-5 text-white" />}
-                      {category.includes('AI') && <Code className="w-5 h-5 text-white" />}
-                    </div>
-                    <h3 className="font-semibold text-lg">{category}</h3>
-                  </div>
+                   <div className="flex items-center gap-3 mb-4">
+                     <div className="p-2 bg-primary rounded-lg shadow-glow">
+                       {category.includes('Programming') && <Code className="w-5 h-5 text-primary-foreground" />}
+                       {category.includes('Web') && <Globe className="w-5 h-5 text-primary-foreground" />}
+                       {category.includes('DevOps') && <Server className="w-5 h-5 text-primary-foreground" />}
+                       {category.includes('Cloud') && <Server className="w-5 h-5 text-primary-foreground" />}
+                       {category.includes('Database') && <Database className="w-5 h-5 text-primary-foreground" />}
+                       {category.includes('AI') && <Code className="w-5 h-5 text-primary-foreground" />}
+                     </div>
+                     <h3 className="font-semibold text-lg">{category}</h3>
+                   </div>
                   <div className="flex flex-wrap gap-2">
                     {skillList.map((skill) => (
                       <Badge key={skill} variant="outline" className="text-sm">
@@ -373,13 +373,13 @@ const Index = () => {
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <Badge key={tech} className="bg-gradient-accent text-accent-foreground hover:shadow-glow transition-all">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
+                   <div className="flex flex-wrap gap-2">
+                     {project.tech.map((tech) => (
+                       <Badge key={tech} className="bg-accent text-accent-foreground hover:shadow-glow transition-all">
+                         {tech}
+                       </Badge>
+                     ))}
+                   </div>
                 </CardContent>
               </Card>
             ))}
@@ -409,10 +409,10 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="card-elegant p-8 animate-slide-up">
               <CardContent className="p-0">
-                <div className="flex items-start gap-6">
-                  <div className="p-3 bg-gradient-primary rounded-lg flex-shrink-0">
-                    <Server className="w-6 h-6 text-white" />
-                  </div>
+                 <div className="flex items-start gap-6">
+                   <div className="p-3 bg-primary rounded-lg flex-shrink-0 shadow-glow">
+                     <Server className="w-6 h-6 text-primary-foreground" />
+                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-4">
                       <div>
@@ -468,10 +468,10 @@ const Index = () => {
             {certifications.map((cert, index) => (
               <Card key={cert.name} className="card-elegant p-6 animate-slide-up hover:border-accent/50" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardContent className="p-0">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 bg-gradient-accent rounded-lg flex-shrink-0 pulse-glow">
-                      <Award className="w-5 h-5 text-white" />
-                    </div>
+                   <div className="flex items-start gap-4">
+                     <div className="p-2 bg-accent rounded-lg flex-shrink-0 pulse-glow shadow-glow">
+                       <Award className="w-5 h-5 text-accent-foreground" />
+                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold mb-2 text-foreground">{cert.name}</h3>
                       <div className="flex items-center gap-2 mb-2">
@@ -548,10 +548,10 @@ const Index = () => {
                 <CardContent className="p-0">
                   <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
                   <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-gradient-primary rounded-lg">
-                        <Mail className="w-6 h-6 text-white" />
-                      </div>
+                     <div className="flex items-center gap-4">
+                       <div className="p-3 bg-primary rounded-lg shadow-glow">
+                         <Mail className="w-6 h-6 text-primary-foreground" />
+                       </div>
                       <div>
                         <p className="font-semibold">Email</p>
                         <a href="mailto:adithya14255@gmail.com" className="text-primary hover:underline">
@@ -560,10 +560,10 @@ const Index = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-gradient-primary rounded-lg">
-                        <Phone className="w-6 h-6 text-white" />
-                      </div>
+                     <div className="flex items-center gap-4">
+                       <div className="p-3 bg-primary rounded-lg shadow-glow">
+                         <Phone className="w-6 h-6 text-primary-foreground" />
+                       </div>
                       <div>
                         <p className="font-semibold">Phone</p>
                         <a href="tel:+919952189871" className="text-primary hover:underline">
@@ -572,10 +572,10 @@ const Index = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-gradient-primary rounded-lg">
-                        <MapPin className="w-6 h-6 text-white" />
-                      </div>
+                     <div className="flex items-center gap-4">
+                       <div className="p-3 bg-primary rounded-lg shadow-glow">
+                         <MapPin className="w-6 h-6 text-primary-foreground" />
+                       </div>
                       <div>
                         <p className="font-semibold">Location</p>
                         <p className="text-muted-foreground">Coimbatore, Tamil Nadu, India</p>
@@ -585,28 +585,28 @@ const Index = () => {
                     <div className="pt-6">
                       <h4 className="font-semibold mb-4">Connect With Me</h4>
                       <div className="flex gap-4">
-                        <a 
-                          href="https://linkedin.com/in/adithya-g-a2085b268/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="p-3 bg-gradient-primary rounded-lg text-white hover:shadow-glow transition-all"
-                        >
-                          <Linkedin className="w-6 h-6" />
-                        </a>
-                        <a 
-                          href="https://github.com/Adithya14255" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="p-3 bg-gradient-primary rounded-lg text-white hover:shadow-glow transition-all"
-                        >
-                          <Github className="w-6 h-6" />
-                        </a>
-                        <a 
-                          href="mailto:adithya14255@gmail.com"
-                          className="p-3 bg-gradient-primary rounded-lg text-white hover:shadow-glow transition-all"
-                        >
-                          <Mail className="w-6 h-6" />
-                        </a>
+                         <a 
+                           href="https://linkedin.com/in/adithya-g-a2085b268/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="p-3 bg-primary rounded-lg text-primary-foreground hover:shadow-neon transition-all"
+                         >
+                           <Linkedin className="w-6 h-6" />
+                         </a>
+                         <a 
+                           href="https://github.com/Adithya14255" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="p-3 bg-secondary rounded-lg text-secondary-foreground hover:shadow-glow transition-all"
+                         >
+                           <Github className="w-6 h-6" />
+                         </a>
+                         <a 
+                           href="mailto:adithya14255@gmail.com"
+                           className="p-3 bg-accent rounded-lg text-accent-foreground hover:shadow-glow transition-all"
+                         >
+                           <Mail className="w-6 h-6" />
+                         </a>
                       </div>
                     </div>
                   </div>

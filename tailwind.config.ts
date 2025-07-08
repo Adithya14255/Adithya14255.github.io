@@ -74,10 +74,10 @@ export default {
 				}
 			},
 			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-accent': 'var(--gradient-accent)',
-				'gradient-hero': 'var(--gradient-hero)',
+				'light-strip-primary': 'var(--light-strip-primary)',
+				'light-strip-secondary': 'var(--light-strip-secondary)',
+				'light-strip-accent': 'var(--light-strip-accent)',
+				'light-strip-hero': 'var(--light-strip-hero)',
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
