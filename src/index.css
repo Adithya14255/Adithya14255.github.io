@@ -9,21 +9,24 @@
 @layer base {
   :root {
     /* Dark Futuristic Base */
-    --background: 0 0% 6%;           /* Dark gray background */
-    --foreground: 0 0% 95%;          /* Light text */
+    --background: 0 0% 4%;           /* Darker background */
+    --foreground: 0 0% 98%;          /* Bright text */
     
-    /* Subtle Neon Accents */
-    --primary: 280 60% 65%;          /* Muted neon violet */
-    --primary-foreground: 0 0% 10%;  
-    --primary-light: 280 50% 75%;    /* Lighter accent */
-    --primary-dark: 280 70% 55%;     /* Darker accent */
+    /* Bright Neon Accents */
+    --primary: 280 100% 75%;         /* Bright neon violet */
+    --primary-foreground: 0 0% 5%;  
+    --primary-light: 280 90% 85%;    /* Lighter bright accent */
+    --primary-dark: 280 100% 65%;    /* Darker bright accent */
     
-    --secondary: 200 60% 65%;        /* Muted cyan accent */
-    --secondary-foreground: 0 0% 10%;
-    --secondary-light: 200 50% 75%;
+    --secondary: 180 100% 75%;       /* Bright neon cyan */
+    --secondary-foreground: 0 0% 5%;
+    --secondary-light: 180 90% 85%;
     
-    --accent: 160 50% 60%;           /* Muted green accent */
-    --accent-foreground: 0 0% 10%;
+    --accent: 120 100% 65%;          /* Bright neon green */
+    --accent-foreground: 0 0% 5%;
+    
+    --warning: 45 100% 70%;          /* Bright neon orange */
+    --warning-foreground: 0 0% 5%;
     
     /* Neutral Surfaces */
     --card: 0 0% 10%;                /* Card background */
@@ -38,17 +41,18 @@
     --input: 0 0% 15%;
     --ring: 280 60% 65%;
     
-    /* Minimal Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    /* Bright Neon Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--warning)));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 2%), hsl(280 50% 8%));
     
-    /* Subtle Neon Effects */
-    --shadow-elegant: 0 4px 20px hsl(var(--primary) / 0.15);
-    --shadow-card: 0 4px 12px hsl(0 0% 0% / 0.3);
-    --shadow-hover: 0 8px 30px hsl(var(--primary) / 0.2);
-    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.4);
+    /* Bright Neon Effects */
+    --shadow-elegant: 0 4px 25px hsl(var(--primary) / 0.4);
+    --shadow-card: 0 4px 15px hsl(0 0% 0% / 0.5);
+    --shadow-hover: 0 12px 40px hsl(var(--primary) / 0.5);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.8);
+    --shadow-neon: 0 0 15px hsl(var(--primary)), 0 0 30px hsl(var(--primary) / 0.5), 0 0 45px hsl(var(--primary) / 0.3);
     
     /* Animation System */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -82,36 +86,40 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 96%;
     
-    --primary: 280 60% 70%;
-    --primary-foreground: 0 0% 8%;
-    --primary-light: 280 50% 80%;
-    --primary-dark: 280 70% 60%;
+    --primary: 280 100% 78%;
+    --primary-foreground: 0 0% 5%;
+    --primary-light: 280 90% 88%;
+    --primary-dark: 280 100% 68%;
     
-    --secondary: 200 60% 70%;
-    --secondary-foreground: 0 0% 8%;
-    --secondary-light: 200 50% 80%;
+    --secondary: 180 100% 78%;
+    --secondary-foreground: 0 0% 5%;
+    --secondary-light: 180 90% 88%;
     
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 75%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 80%;
     
-    --accent: 160 50% 65%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 120 100% 68%;
+    --accent-foreground: 0 0% 5%;
+    
+    --warning: 45 100% 73%;
+    --warning-foreground: 0 0% 5%;
     
     --border: 0 0% 18%;
     --input: 0 0% 12%;
     --ring: 280 60% 70%;
     
-    /* Consistent gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 6%), hsl(0 0% 10%));
+    /* Bright dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--warning)));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 2%), hsl(280 50% 12%));
     
-    /* Consistent shadows */
-    --shadow-elegant: 0 4px 20px hsl(var(--primary) / 0.2);
-    --shadow-card: 0 4px 12px hsl(0 0% 0% / 0.4);
-    --shadow-hover: 0 8px 30px hsl(var(--primary) / 0.25);
-    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.5);
+    /* Bright dark mode shadows */
+    --shadow-elegant: 0 4px 25px hsl(var(--primary) / 0.5);
+    --shadow-card: 0 4px 15px hsl(0 0% 0% / 0.6);
+    --shadow-hover: 0 12px 40px hsl(var(--primary) / 0.6);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.9);
+    --shadow-neon: 0 0 15px hsl(var(--primary)), 0 0 30px hsl(var(--primary) / 0.6), 0 0 45px hsl(var(--primary) / 0.4);
     
     /* Dark sidebar */
     --sidebar-background: 240 5.9% 10%;
@@ -158,8 +166,11 @@
   }
   
   .text-gradient {
-    color: hsl(var(--primary));
-    text-shadow: 0 0 10px hsl(var(--primary) / 0.3);
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.6);
   }
   
   .card-elegant {
@@ -187,27 +198,38 @@
   }
   
   .card-elegant:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-4px);
-    border-color: hsl(var(--primary) / 0.3);
+    box-shadow: var(--shadow-neon);
+    transform: translateY(-6px) scale(1.02);
+    border-color: hsl(var(--primary) / 0.8);
   }
   
   .btn-gradient {
-    background: hsl(var(--primary));
+    background: var(--gradient-primary);
     color: hsl(var(--primary-foreground));
     transition: var(--transition-smooth);
     position: relative;
+    border: 1px solid hsl(var(--primary) / 0.5);
   }
   
   .btn-gradient:hover {
-    box-shadow: var(--shadow-glow);
-    transform: translateY(-1px);
+    box-shadow: var(--shadow-neon);
+    transform: translateY(-2px) scale(1.05);
+    border-color: hsl(var(--primary));
   }
   
   .skill-bar {
-    background: hsl(var(--secondary));
+    background: var(--gradient-secondary);
     border-radius: var(--radius);
     transition: var(--transition-bounce);
+    box-shadow: 0 0 10px hsl(var(--secondary) / 0.5);
+  }
+  
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+  
+  .floating-icon {
+    animation: float 6s ease-in-out infinite;
   }
   
   /* Neon Grid Lines */
@@ -294,6 +316,20 @@
   to {
     text-shadow: 0 0 15px hsl(var(--primary) / 0.6), 0 0 25px hsl(var(--primary) / 0.3);
   }
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 5px hsl(var(--primary) / 0.4);
+  }
+  to {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.8), 0 0 30px hsl(var(--primary) / 0.4);
+  }
+}
+
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
 }
 
 /* Typing animation */
